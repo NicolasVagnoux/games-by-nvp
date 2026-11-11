@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Nunito, Montserrat } from 'next/font/google';
+import { Nunito, Fredoka } from 'next/font/google';
 import './globals.css';
 
 const nunito = Nunito({
@@ -8,8 +8,8 @@ const nunito = Nunito({
   display: 'swap'
 });
 
-const montserrat = Montserrat({
-  variable: '--font-montserrat',
+const fredoka = Fredoka({
+  variable: '--font-fredoka',
   subsets: ['latin'],
   display: 'swap',
 });
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='fr'>
-      <body className={`${nunito.variable} ${montserrat.variable}`}>{children}</body>
+      <body className={`${nunito.variable} ${fredoka.variable}`}>{children}</body>
     </html>
   );
 }

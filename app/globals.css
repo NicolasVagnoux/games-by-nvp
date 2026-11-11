@@ -6,10 +6,23 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+
+  /* Fonts */
   --font-nunito: var(--font-nunito);
-  --font-montserrat: var(--font-montserrat);
+  --font-fredoka: var(--font-fredoka);
+
+  /* Colors */
+  --color-background: #8FD8F0;
+  --color-dark: #1F1B3D;
+  --color-light: #FFF8E7;
+  --color-sun: #FFD43B;
+  --color-victory: #22B573;
+
+  --color-coral: #FF6B5E;
+  --color-blue: #4D9DFF;
+  --color-mint: #2EC4B6;
+  --color-purple: #A78BFA;
+  --color-pink: #FF9EC4;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,8 +33,14 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  background-color: #91daeb !important;
-  font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-dark);
+  background-color: var(--color-background);
+  font-family: var(--font-nunito), Arial, Helvetica, sans-serif;
+}
+
+.card {
+  border: 3px solid var(--color-dark);
+  border-radius: 24px;
+  box-shadow: 0px 8px 0px var(--color-dark);
 }

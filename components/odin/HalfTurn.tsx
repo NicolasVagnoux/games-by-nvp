@@ -24,9 +24,12 @@ const HalfTurn = ({ turn, setTurn, scores }: HalfTurnProps) => {
         </p>
       ))}
       {endGame ? (
-        <p className='text-2xl mt-8 font-semibold text-green-600'>
-          Gagnant(s) : {winners.map((w) => w.player).join(' / ')}
-        </p>
+        <>
+          <p className='text-2xl mt-8 font-semibold text-green-600 mb-6'>
+            Gagnant(s) : {winners.map((w) => w.player).join(' / ')}
+          </p>
+          <button onClick={() => setTurn(0)}>Rejouer</button>
+        </>
       ) : (
         <button
           onClick={() => {

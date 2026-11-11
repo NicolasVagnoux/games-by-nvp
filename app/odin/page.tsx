@@ -1,7 +1,7 @@
 'use client';
 import HalfTurn from '@/components/odin/HalfTurn';
-import Turn from '@/components/odin/Turn';
-import Turn1 from '@/components/odin/Turn0';
+import Turn from '@/components/common/Turn';
+import Turn0 from '@/components/common/Turn0';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -11,10 +11,11 @@ const Odin = () => {
 
   const renderTurn = () => {
     if (turn === 0) {
-      return <Turn1 setTurn={setTurn} scores={scores} setScores={setScores} />;
+      return <Turn0 setTurn={setTurn} scores={scores} setScores={setScores} />;
     };
     if (turn % 1 === 0) {
       return <Turn
+        description='Notez le nombre de cartes restantes de chaque joueur :'
         turn={turn}
         setTurn={setTurn}
         scores={scores}

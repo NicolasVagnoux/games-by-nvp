@@ -1,13 +1,14 @@
-import React, { Dispatch, SetStateAction, useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 
 type TurnProps = {
+  description: string;
   turn: number;
   setTurn: Dispatch<SetStateAction<number>>;
   scores: { player: string; score: number }[];
   setScores: Dispatch<SetStateAction<{ player: string; score: number }[]>>;
 };
 
-const Turn = ({ turn, setTurn, scores, setScores }: TurnProps) => {
+const Turn = ({ description, turn, setTurn, scores, setScores }: TurnProps) => {
   const [turnValues, setTurnValues] = useState<number[]>(() =>
     scores.map(() => 0)
   );
@@ -15,9 +16,7 @@ const Turn = ({ turn, setTurn, scores, setScores }: TurnProps) => {
   return (
     <div className='w-full flex flex-col justify-start items-center'>
       <h3 className='text-2xl'>Tour {turn}</h3>
-      <p className='mb-6 mt-2'>
-        Notez le nombre de cartes restantes de chaque joueur :
-      </p>
+      <p className='mb-6 mt-2'>{description}</p>
       {scores.map((score, i) => (
         <div
           key={i}
