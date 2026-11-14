@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { games } from './data/games';
+import Layout from '@/components/common/Layout';
 
 const Home = () => {
 
   return (
-    <div className='mx-auto max-w-125 flex flex-col justify-start items-center'>
-      <h1 className='pt-16 text-center text-5xl sm:text-6xl font-semibold font-fredoka'>
+    <Layout>
+      <h1 className='pt-16 text-center text-5xl sm:text-6xl font-bold font-fredoka'>
         Games by NVP
       </h1>
       <p className='text-lg sm:text-xl font-bold my-3'>
@@ -30,7 +31,7 @@ const Home = () => {
           {game.deco}
         </Link>
       ))}
-    </div>
+    </Layout>
   );
 };
 
