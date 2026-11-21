@@ -1,5 +1,5 @@
 'use client';
-import HalfTurn from '@/components/odin/HalfTurn';
+import HalfTurn from '@/components/common/HalfTurn';
 import Turn from '@/components/common/Turn';
 import Turn0 from '@/components/common/Turn0';
 import { useState } from 'react';
@@ -29,6 +29,7 @@ const Odin = () => {
         turn={turn}
         setTurn={setTurn}
         scores={scores}
+        conditionsToEndGame={{ score: 15, higherOrLowerToWin: 'lower' }}
       />;
     }
   };

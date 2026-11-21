@@ -1,6 +1,7 @@
 import { ArrowRight, Minus, Plus } from 'lucide-react';
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import ContinueButton from './Buttons/ContinueButton';
+import { playerColors } from '@/app/data/colors';
 
 type Turn1Props = {
   setTurn: Dispatch<SetStateAction<number>>;
@@ -10,8 +11,6 @@ type Turn1Props = {
 
 const Turn0 = ({ setTurn, scores, setScores }: Turn1Props) => {
   const [nbPlayers, setNbPlayers] = useState<number>(0);
-
-  const playerColors = ['bg-coral', 'bg-blue', 'bg-mint', 'bg-purple', 'bg-pink', 'bg-sun'];
 
   useEffect(() => {
     setScores((prevScores) =>

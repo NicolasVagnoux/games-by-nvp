@@ -1,5 +1,5 @@
 'use client';
-import HalfTurn from '@/components/flip7/HalfTurn';
+import HalfTurn from '@/components/common/HalfTurn';
 import Turn from '@/components/common/Turn';
 import Turn0 from '@/components/common/Turn0';
 import { useState } from 'react';
@@ -29,6 +29,7 @@ const Flip7 = () => {
         turn={turn}
         setTurn={setTurn}
         scores={scores}
+        conditionsToEndGame={{ score: 200, higherOrLowerToWin: 'higher' }}
       />;
     }
   };

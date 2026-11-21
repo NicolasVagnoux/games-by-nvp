@@ -11,7 +11,7 @@ const Layout = ({ children, className }: SectionProps) => {
 
   return (
     <>
-      <div className={`relative mx-auto max-w-125 flex flex-col justify-start items-center ${className ?? ''}`}>
+      <div className={`relative mx-auto max-w-125 pb-8 flex flex-col justify-start items-center ${className ?? ''}`}>
         {children}
       </div>
       <div className={`${baseClass} w-26 h-36 bottom-[25%] -left-10 -rotate-15 rounded-xl bg-coral`}></div>
